@@ -9,8 +9,70 @@ HTML_FORM = '''
 <head>
     <meta charset="UTF-8">
     <title>Submit Preferences</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .textbox-container {
+            width: 50%;
+            display: flex;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0px 0px 5px #ccc;
+            padding: 10px;
+        }
+        .textbox {
+            flex: 1;
+            padding: 10px;
+        }
+        .textbox:first-child {
+            border-right: 1px solid #ccc;
+        }
+        form {
+            width: 50%;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-shadow: 0px 0px 5px #ccc;
+        }
+        label, input {
+            margin: 10px 0;
+            display: block;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
+    <div class="textbox-container">
+        <div class="textbox">
+            <h2>Preferences (ENG)</h2>
+            <p>Please rank the movies from 1 to 6 according to your preference.</p>
+        </div>
+        <div class="textbox">
+            <h2>Preference (CZE)</h2>
+            <p>Prosím, ohodnoťte filmy od 1 do 6 podle vašich preferencí.</p>
+        </div>
+    </div>
+    
     <h1>Submit Preferences</h1>
     <form method="post">
         <label for="item1">The Revenant</label>

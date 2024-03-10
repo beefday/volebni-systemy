@@ -35,13 +35,15 @@
         }
         label, input {
             margin: 10px 0;
-            display: block;
-        }
-        input[type="number"], input[type="radio"], input[type="submit"] {
-            width: 100%;
-            padding: 8px;
+            display: inline;
             margin-top: 5px;
         }
+        input[type="radio"]{
+            width: auto;
+            margin-top: 5px;
+            vertical-align: middle;
+        }
+
         input[type="submit"] {
             background-color: #007bff;
             color: white;
@@ -62,26 +64,44 @@
     </style>
 </head>
 <body>
-    <div class="textbox-container">
-        <div class="textbox">
-            <h2>Preferences (ENG)</h2>
-            <p>Please rank the movies from 1 to 6 according to your preference, and choose one as the best. Fill out both sets for different scenarios or preferences.</p>
-        </div>
-        <div class="textbox">
-            <h2>Preference (CZE)</h2>
-            <p>Prosím, ohodnoťte filmy od 1 do 6 podle vašich preferencí a zvolte jeden jako nejlepší. Vyplňte obě sady pro různé scénáře nebo preference.</p>
-        </div>
-    </div>
     
     <form method="post">
-        <!-- Set 1 Instructions -->
         <div class="textbox-container">
             <div class="textbox">
-                <h2>Set 1 Preferences</h2>
+                <h2>FPTP</h2>
+                <p>Pick the one best movie!</p>
+            </div>
+            <div class="textbox">
+                <h2>FPTP</h2>
+                <p>Vyberte právě jeden nejlepší film!</p>
+            </div>
+        </div>
+
+        <input type="radio" id="best1" name="best_movie" value="The Revenant">
+        <label for="best1">The Revenant</label><br>
+        
+        <input type="radio" id="best2" name="best_movie" value="The Wolf of Wall Street">
+        <label for="best2">The Wolf of Wall Street</label><br>
+        
+        <input type="radio" id="best3" name="best_movie" value="Django Unchained">
+        <label for="best3">Django Unchained</label><br>
+        
+        <input type="radio" id="best4" name="best_movie" value="Titanic">
+        <label for="best4">Titanic</label><br>
+        
+        <input type="radio" id="best5" name="best_movie" value="Inception">
+        <label for="best5">Inception</label><br>
+        
+        <input type="radio" id="best6" name="best_movie" value="The Great Gatsby">
+        <label for="best6">The Great Gatsby</label><br>
+        
+        <div class="textbox-container">
+            <div class="textbox">
+                <h2>Alternative Vote</h2>
                 <p>Rank the following movies from 1 to 6 for Set 1.</p>
             </div>
             <div class="textbox">
-                <h2>Sada 1 Preferencí</h2>
+                <h2>Alternativní hlasování</h2>
                 <p>Ohodnoťte následující filmy od 1 do 6 pro sadu 1.</p>
             </div>
         </div>
@@ -110,11 +130,11 @@
         <!-- Set 2 Instructions -->
         <div class="textbox-container">
             <div class="textbox">
-                <h2>Set 2 Preferences</h2>
+                <h2>Bordo Vote</h2>
                 <p>Rank the following movies from 1 to 6 for Set 2.</p>
             </div>
             <div class="textbox">
-                <h2>Sada 2 Preferencí</h2>
+                <h2>Bordovo hlasování</h2>
                 <p>Ohodnoťte následující filmy od 1 do 6 pro sadu 2.</p>
             </div>
         </div>
@@ -140,35 +160,6 @@
             <input type="number" id="group2_item6" name="group2_item6" min="1" max="6"><br>
         </fieldset>
         
-        <!-- Set 2 Instructions -->
-        <div class="textbox-container">
-            <div class="textbox">
-                <h2>Set 2 Preferences</h2>
-                <p>Rank the following movies from 1 to 6 for Set 2.</p>
-            </div>
-            <div class="textbox">
-                <h2>Sada 2 Preferencí</h2>
-                <p>Ohodnoťte následující filmy od 1 do 6 pro sadu 2.</p>
-            </div>
-        </div>
-
-        <input type="radio" id="best1" name="best_movie" value="The Revenant">
-        <label for="best1">The Revenant</label><br>
-        
-        <input type="radio" id="best2" name="best_movie" value="The Wolf of Wall Street">
-        <label for="best2">The Wolf of Wall Street</label><br>
-        
-        <input type="radio" id="best3" name="best_movie" value="Django Unchained">
-        <label for="best3">Django Unchained</label><br>
-        
-        <input type="radio" id="best4" name="best_movie" value="Titanic">
-        <label for="best4">Titanic</label><br>
-        
-        <input type="radio" id="best5" name="best_movie" value="Inception">
-        <label for="best5">Inception</label><br>
-        
-        <input type="radio" id="best6" name="best_movie" value="The Great Gatsby">
-        <label for="best6">The Great Gatsby</label><br>
         
         <input type="submit" value="Submit">
     </form>

@@ -33,22 +33,13 @@
             padding: 20px;
             box-shadow: 0px 0px 5px #ccc;
         }
-        label, input {
-            margin: 10px 0;
-            display: inline;
-            margin-top: 5px;
-        }
-        input[type="radio"]{
-            width: auto;
-            margin-top: 5px;
-            vertical-align: middle;
-        }
-
         input[type="submit"] {
             background-color: #007bff;
             color: white;
             border: none;
             cursor: pointer;
+            padding: 10px 20px; /* Adjusted padding */
+            margin-top: 10px; /* Added margin-top */
         }
         input[type="submit"]:hover {
             background-color: #0056b3;
@@ -61,10 +52,22 @@
             font-weight: bold;
             margin-bottom: 10px;
         }
+        .input-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        padding: 0 10px; /* This matches the padding of the .textbox for alignment */
+        width: 90%; /* Match the width of the textbox-container */
+        margin-left: auto; /* Center align the container */
+        margin-right: auto; /* Center align the container */
+        }
+        input, label {
+            margin: 5px;
+        }
     </style>
 </head>
 <body>
-    
+
     <form method="post">
         <div class="textbox-container">
             <div class="textbox">
@@ -77,89 +80,105 @@
             </div>
         </div>
 
-        <input type="radio" id="best1" name="best_movie" value="The Revenant">
-        <label for="best1">The Revenant</label><br>
-        
-        <input type="radio" id="best2" name="best_movie" value="The Wolf of Wall Street">
-        <label for="best2">The Wolf of Wall Street</label><br>
-        
-        <input type="radio" id="best3" name="best_movie" value="Django Unchained">
-        <label for="best3">Django Unchained</label><br>
-        
-        <input type="radio" id="best4" name="best_movie" value="Titanic">
-        <label for="best4">Titanic</label><br>
-        
-        <input type="radio" id="best5" name="best_movie" value="Inception">
-        <label for="best5">Inception</label><br>
-        
-        <input type="radio" id="best6" name="best_movie" value="The Great Gatsby">
-        <label for="best6">The Great Gatsby</label><br>
-        
+        <div class="input-container">
+            <input type="radio" id="best1" name="best_movie" value="The Revenant">
+            <label for="best1">The Revenant</label>
+        </div>
+        <div class="input-container">
+            <input type="radio" id="best2" name="best_movie" value="The Wolf of Wall Street">
+            <label for="best2">The Wolf of Wall Street</label>
+        </div>
+        <div class="input-container">
+            <input type="radio" id="best3" name="best_movie" value="Django Unchained">
+            <label for="best3">Django Unchained</label>
+        </div>
+        <div class="input-container">
+            <input type="radio" id="best4" name="best_movie" value="Titanic">
+            <label for="best4">Titanic</label>
+        </div>
+        <div class="input-container">
+            <input type="radio" id="best5" name="best_movie" value="Inception">
+            <label for="best5">Inception</label>
+        </div>
+        <div class="input-container">
+            <input type="radio" id="best6" name="best_movie" value="The Great Gatsby">
+            <label for="best6">The Great Gatsby</label>
+        </div>
+
         <div class="textbox-container">
             <div class="textbox">
                 <h2>Alternative Vote</h2>
-                <p>Rank the following movies from 1 to 6 for Set 1.</p>
+                <p>Rank the following movies from 1 to 6</p>
             </div>
             <div class="textbox">
                 <h2>Alternativní hlasování</h2>
-                <p>Ohodnoťte následující filmy od 1 do 6 pro sadu 1.</p>
+                <p>Ohodnoťte následující filmy od 1 do 6</p>
             </div>
         </div>
-        
+
         <fieldset>
-            <legend>Set 1</legend>
-            <label for="group1_item1">The Revenant</label>
-            <input type="number" id="group1_item1" name="group1_item1" min="1" max="6"><br>
-            
-            <label for="group1_item2">The Wolf of Wall Street</label>
-            <input type="number" id="group1_item2" name="group1_item2" min="1" max="6"><br>
-            
-            <label for="group1_item3">Django Unchained</label>
-            <input type="number" id="group1_item3" name="group1_item3" min="1" max="6"><br>
-            
-            <label for="group1_item4">Titanic</label>
-            <input type="number" id="group1_item4" name="group1_item4" min="1" max="6"><br>
-            
-            <label for="group1_item5">Inception</label>
-            <input type="number" id="group1_item5" name="group1_item5" min="1" max="6"><br>
-            
-            <label for="group1_item6">The Great Gatsby</label>
-            <input type="number" id="group1_item6" name="group1_item6" min="1" max="6"><br>
+            <div class="input-container">
+                <input type="number" id="group1_item1" name="group1_item1" min="1" max="6">
+                <label for="group1_item1">The Revenant</label>
+            </div>
+            <div class="input-container">
+                <input type="number" id="group1_item2" name="group1_item2" min="1" max="6">
+                <label for="group1_item2">The Wolf of Wall Street</label>
+            </div>
+            <div class="input-container">
+                <input type="number" id="group1_item3" name="group1_item3" min="1" max="6">
+                <label for="group1_item3">Django Unchained</label>
+            </div>
+            <div class="input-container">
+                <input type="number" id="group1_item4" name="group1_item4" min="1" max="6">
+                <label for="group1_item4">Titanic</label>
+            </div>
+            <div class="input-container">
+                <input type="number" id="group1_item5" name="group1_item5" min="1" max="6">
+                <label for="group1_item5">Inception</label>
+            </div>
+            <div class="input-container">
+                <input type="number" id="group1_item6" name="group1_item6" min="1" max="6">
+                <label for="group1_item6">The Great Gatsby</label>
+            </div>
         </fieldset>
-        
-        <!-- Set 2 Instructions -->
         <div class="textbox-container">
             <div class="textbox">
                 <h2>Bordo Vote</h2>
-                <p>Rank the following movies from 1 to 6 for Set 2.</p>
+                <p>Rank the following movies from 1 to 6</p>
             </div>
             <div class="textbox">
                 <h2>Bordovo hlasování</h2>
-                <p>Ohodnoťte následující filmy od 1 do 6 pro sadu 2.</p>
+                <p>Ohodnoťte následující filmy od 1 do 6</p>
             </div>
         </div>
-        
+
         <fieldset>
-            <legend>Set 2</legend>
-            <label for="group2_item1">The Revenant</label>
-            <input type="number" id="group2_item1" name="group2_item1" min="1" max="6"><br>
-            
-            <label for="group2_item2">The Wolf of Wall Street</label>
-            <input type="number" id="group2_item2" name="group2_item2" min="1" max="6"><br>
-            
-            <label for="group2_item3">Django Unchained</label>
-            <input type="number" id="group2_item3" name="group2_item3" min="1" max="6"><br>
-            
-            <label for="group2_item4">Titanic</label>
-            <input type="number" id="group2_item4" name="group2_item4" min="1" max="6"><br>
-            
-            <label for="group2_item5">Inception</label>
-            <input type="number" id="group2_item5" name="group2_item5" min="1" max="6"><br>
-            
-            <label for="group2_item6">The Great Gatsby</label>
-            <input type="number" id="group2_item6" name="group2_item6" min="1" max="6"><br>
+            <div class="input-container">
+                <input type="number" id="group2_item1" name="group2_item1" min="1" max="6">
+                <label for="group2_item1">The Revenant</label>
+            </div>
+            <div class="input-container">
+                <input type="number" id="group2_item2" name="group2_item2" min="1" max="6">
+                <label for="group2_item2">The Wolf of Wall Street</label>
+            </div>
+            <div class="input-container">
+                <input type="number" id="group2_item3" name="group2_item3" min="1" max="6">
+                <label for="group2_item3">Django Unchained</label>
+            </div>
+            <div class="input-container">
+                <input type="number" id="group2_item4" name="group2_item4" min="1" max="6">
+                <label for="group2_item4">Titanic</label>
+            </div>
+            <div class="input-container">
+                <input type="number" id="group2_item5" name="group2_item5" min="1" max="6">
+                <label for="group2_item5">Inception</label>
+            </div>
+            <div class="input-container">
+                <input type="number" id="group2_item6" name="group2_item6" min="1" max="6">
+                <label for="group2_item6">The Great Gatsby</label>
+            </div>
         </fieldset>
-        
         
         <input type="submit" value="Submit">
     </form>

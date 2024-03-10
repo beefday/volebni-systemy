@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submit Preferences</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .textbox-container {
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            display: flex;
+            margin: 0 auto; /* Updated line */
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0px 0px 5px #ccc;
+            padding: 10px;
+        }
+        .textbox {
+            flex: 1;
+            padding: 10px;
+        }
+        form {
+            width: 50%;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-shadow: 0px 0px 5px #ccc;
+        }
+        label, input {
+            margin: 10px 0;
+            display: block;
+        }
+        input[type="number"], input[type="radio"], input[type="submit"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        fieldset {
+            border: none;
+            margin-top: 20px;
+        }
+        legend {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="textbox-container">
+        <div class="textbox">
+            <h2>Preferences (ENG)</h2>
+            <p>Please rank the movies from 1 to 6 according to your preference, and choose one as the best. Fill out both sets for different scenarios or preferences.</p>
+        </div>
+        <div class="textbox">
+            <h2>Preference (CZE)</h2>
+            <p>Prosím, ohodnoťte filmy od 1 do 6 podle vašich preferencí a zvolte jeden jako nejlepší. Vyplňte obě sady pro různé scénáře nebo preference.</p>
+        </div>
+    </div>
+    
+    <form method="post">
+        <!-- Set 1 Instructions -->
+        <div class="textbox-container">
+            <div class="textbox">
+                <h2>Set 1 Preferences</h2>
+                <p>Rank the following movies from 1 to 6 for Set 1.</p>
+            </div>
+            <div class="textbox">
+                <h2>Sada 1 Preferencí</h2>
+                <p>Ohodnoťte následující filmy od 1 do 6 pro sadu 1.</p>
+            </div>
+        </div>
+        
+        <fieldset>
+            <legend>Set 1</legend>
+            <label for="group1_item1">The Revenant</label>
+            <input type="number" id="group1_item1" name="group1_item1" min="1" max="6"><br>
+            
+            <label for="group1_item2">The Wolf of Wall Street</label>
+            <input type="number" id="group1_item2" name="group1_item2" min="1" max="6"><br>
+            
+            <label for="group1_item3">Django Unchained</label>
+            <input type="number" id="group1_item3" name="group1_item3" min="1" max="6"><br>
+            
+            <label for="group1_item4">Titanic</label>
+            <input type="number" id="group1_item4" name="group1_item4" min="1" max="6"><br>
+            
+            <label for="group1_item5">Inception</label>
+            <input type="number" id="group1_item5" name="group1_item5" min="1" max="6"><br>
+            
+            <label for="group1_item6">The Great Gatsby</label>
+            <input type="number" id="group1_item6" name="group1_item6" min="1" max="6"><br>
+        </fieldset>
+        
+        <!-- Set 2 Instructions -->
+        <div class="textbox-container">
+            <div class="textbox">
+                <h2>Set 2 Preferences</h2>
+                <p>Rank the following movies from 1 to 6 for Set 2.</p>
+            </div>
+            <div class="textbox">
+                <h2>Sada 2 Preferencí</h2>
+                <p>Ohodnoťte následující filmy od 1 do 6 pro sadu 2.</p>
+            </div>
+        </div>
+        
+        <fieldset>
+            <legend>Set 2</legend>
+            <label for="group2_item1">The Revenant</label>
+            <input type="number" id="group2_item1" name="group2_item1" min="1" max="6"><br>
+            
+            <label for="group2_item2">The Wolf of Wall Street</label>
+            <input type="number" id="group2_item2" name="group2_item2" min="1" max="6"><br>
+            
+            <label for="group2_item3">Django Unchained</label>
+            <input type="number" id="group2_item3" name="group2_item3" min="1" max="6"><br>
+            
+            <label for="group2_item4">Titanic</label>
+            <input type="number" id="group2_item4" name="group2_item4" min="1" max="6"><br>
+            
+            <label for="group2_item5">Inception</label>
+            <input type="number" id="group2_item5" name="group2_item5" min="1" max="6"><br>
+            
+            <label for="group2_item6">The Great Gatsby</label>
+            <input type="number" id="group2_item6" name="group2_item6" min="1" max="6"><br>
+        </fieldset>
+        
+        <!-- Set 2 Instructions -->
+        <div class="textbox-container">
+            <div class="textbox">
+                <h2>Set 2 Preferences</h2>
+                <p>Rank the following movies from 1 to 6 for Set 2.</p>
+            </div>
+            <div class="textbox">
+                <h2>Sada 2 Preferencí</h2>
+                <p>Ohodnoťte následující filmy od 1 do 6 pro sadu 2.</p>
+            </div>
+        </div>
+
+        <input type="radio" id="best1" name="best_movie" value="The Revenant">
+        <label for="best1">The Revenant</label><br>
+        
+        <input type="radio" id="best2" name="best_movie" value="The Wolf of Wall Street">
+        <label for="best2">The Wolf of Wall Street</label><br>
+        
+        <input type="radio" id="best3" name="best_movie" value="Django Unchained">
+        <label for="best3">Django Unchained</label><br>
+        
+        <input type="radio" id="best4" name="best_movie" value="Titanic">
+        <label for="best4">Titanic</label><br>
+        
+        <input type="radio" id="best5" name="best_movie" value="Inception">
+        <label for="best5">Inception</label><br>
+        
+        <input type="radio" id="best6" name="best_movie" value="The Great Gatsby">
+        <label for="best6">The Great Gatsby</label><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

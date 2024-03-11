@@ -18,5 +18,9 @@ def denumerize(number:int):
 
 results = pd.read_csv('preferences.csv', header=None, names=['fptp', 'group1_item1', 'group1_item2', 'group1_item3', 'group1_item4', 'group1_item5', 'group1_item6', 'group2_item1', 'group2_item2', 'group2_item3', 'group2_item4', 'group2_item5', 'group2_item6'])
 
-print(denumerize(results['fptp'].value_counts().idxmax()))
+ftptresults = results['fptp']
+avresults = results[['group1_item1', 'group1_item2', 'group1_item3', 'group1_item4', 'group1_item5', 'group1_item6']]
+bordoresults = results[['group2_item1', 'group2_item2', 'group2_item3', 'group2_item4', 'group2_item5', 'group2_item6']]
 
+print(denumerize(ftptresults.value_counts().idxmax()))
+print(avresults['group1_item1'].value_counts())
